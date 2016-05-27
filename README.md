@@ -1,2 +1,2 @@
-# proplant
-proplant project
+# proplant monitor
+Proplant monitor information platform
