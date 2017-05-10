@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">                       
+	<head>                                    
+		<title>Proplant Monitor</title>
+		<meta charset="windows-1250">                                                                           
+		<meta name="keywords" content="Protected Species, Open data, MyGeoss">                                       
+		<meta name="author" content="FZKI">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0"> 
+    <link rel="stylesheet" href="/proplant/static/style_spoi_olu.css" type="text/css">
+		<script src="/proplant/static/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript">
+
+		function goTo(link){
+				$('html, body').animate({
+					scrollTop: ($(link).offset().top)-100
+				},500);
+				document.getElementById("menu_mobil").style.display="none";
+			}     
+		function menuZobraz(button, id) 
+			  {
+			  if (document.getElementById(id).style.display=="block")
+				{   
+				document.getElementById(id).style.display="none";
+				}
+			  else 
+				{
+				document.getElementById(id).style.display="block";
+				} 
+			  }
+			  
+		function detekceRozliseni ()
+		  {  
+			document.getElementById("menu_mobil").style.display="none";
+		  }
+      
+    function downloadPage() {
+      window.open("/geonetwork/srv/eng/catalog.search#/metadata/3cc18264bb549578e36d5ab326deed3cb2a887f8")
+  };
+  
+  function comingSoon()
+	{
+	alert ("THE CONTENT IS COMING VERY SOON!");
+	}
+
+	
+		</script> 
+
+	</head>
+
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//bolegweb.geof.unizg.hr/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 11]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//bolegweb.geof.unizg.hr/piwik/piwik.php?idsite=11" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+
+	
+	<body onResize="detekceRozliseni()">
+		<header>
+			<div class="width_settings">
+      <h1 id="page_title"><a href="#">PROPLANT MONITOR</em></a></h1>
+				<nav>
+					<ul>
+						<li onClick="goTo('body');">HOME</li>
+						<li onClick="goTo('#visualization');">MAP</li>
+						<li onClick="goTo('#about');">ABOUT</li>
+						<li onClick="goTo('#contribution');">CONTRIBUTION</li>
+						<li onClick="goTo('#links');">LINKS & DOWNLOADS</li>
+						<li onClick="goTo('#contact');">CONTACTS & ACKNOWLEDGEMENTS</li>
+					</ul>
+				</nav>
+				<div id="menu_ikona">
+					<button id="menu_ikona_button" type="button" value="&shy;" onclick="menuZobraz(this, 'menu_mobil');"></button>  
+				</div>
+				<div id="menu_mobil">
+					<button class="menu_mobil_button" type="button" onClick="goTo('body');">HOME</button>
+					<button class="menu_mobil_button" type="button" onClick="goTo('#visualization');">VISUALIZATION</button>
+					<button class="menu_mobil_button" type="button" onClick="goTo('#about');">ABOUT</button>
+					<button class="menu_mobil_button" type="button" onClick="goTo('#contribution');">CONTRIBUTION</button>
+					<button class="menu_mobil_button" type="button" onClick="goTo('#links');">LINKS</button>
+					<button class="menu_mobil_button" type="button" onClick="goTo('#contact');">CONTACT</button>
+				</div>
+
+			</div>
+		</header>
+		
+		
+		<section id="banner">
+			<div class="width_settings">
+				<div id="banner_box">
+					<!--
+					<p id="headline_text">From the Javorniky Mountains to the Tisa River, from Tatras to the Danube River. The Slovaks do not hide their deep affinity for the mountains, for the nature. Just picture their national emblem or close your eyes and listen to the lyrics of their national anthem.</p>
+					-->
+				</div>
+			</div>
+		</section>
+		
+
+    <section class="section_dark">
+			<div class="width_settings">
+				<h3 id="visualization">Protected plant species observations map in Europe</h3>
+				<div class="colored_line"></div>
+				<iframe id="map" src="map.html"></iframe>
+				<button class="headlinesBut" type="button" onclick="window.open('map.html', '_blank')">GO TO FULL EXTENT</button>
+			</div>
+		</section>
+		
+		<section>
+			<div class="width_settings">
+				<h3 id="about">About Proplant Monitor</h3>
+				<div class="colored_line"></div>
+				<img class="img_box" alt="proplant" src="static/img/proplant_logo.png" align="center" style="width: 150px; display: block; margin: auto;"/>
+				<p class="plain_text">In general, assessment of the biodiversity in global scale cannot react on singular case of particular species habitat change. Previous research works in biodiversity have been based on remote sensing data combined with “in-situ” fieldwork. Results of these works are processed in various scales, but still on insufficient level of detail for inventarisation and valuation of endangered species. The aim of Proplant Monitor is to fill a gap among the medium resolution observation and individual unit assessment. This issue needs an approach which will provide possibility for evaluation up till the level of single specimen. The main purpose of Proplant Monitor is to give a tool for registration of endangered and protected species in countries of EU in high resolution. The spatial quality of collected data enables high level monitoring of selected taxonomic units. This kind of observation data contains a great information potential useable not only in biodiversity evaluation. With this tool will be easier to focus on the indication groups, represented by specific species. The interoperability with earth observation services allows to compare a results of observation, as well as making a brand new outputs, regardless of service domain.
+        </p>
+			</div>
+		</section>
+		
+		<section class="section_dark" >
+			<div class="width_settings">
+				<h3 id="contribution">Advantages of Proplant Monitor</h3>
+				<div class="colored_line"></div>
+				<div class="boxes">
+					<div class="box_white">
+						<img class="img_white_box" alt="tick" src="static/img/tick.png"/>
+						<h4 class="box_white_title">OPEN DATABASE</h4>
+						<p class="box_white_text">The data is open and it is available for your download or sharing. Whether you are botanist, environmental scientist, or you only love nature, our data is not limited for usage. So, does not matter if you use our data as they are, or you make some great analysis or map from them, they are always here for you.</p>
+					</div>
+					<div class="box_white">
+						<img class="img_white_box"  alt="tick" src="static/img/tick.png"/>
+						<h4 class="box_white_title">POWERFUL RESEARCH TOOL</h4>
+						<p class="box_white_text">With our app you enhance your botany knowledge in the field and make your research more attractive. By downloading of our app you get the list of protected species with their correct nomenclature. A lot of species have image identificator, which makes your fieldwork much easier and effective. The past practice with paper map orientation and marking is away. Thanks to base map and GPS location in mobile device you never get lost. You are able to record the position of your current observation, came back on your study site, or find the study site of you colleagues. Geotagged photos you captured on study site are then the icing on the cake of your research.</p>
+					</div>
+					<div class="box_white">
+						<img class="img_white_box"  alt="tick" src="static/img/tick.png"/>
+						<h4 class="box_white_title">DYNAMIC AND GLOBAL APPROACH</h4>
+					<p class="box_white_text">Our data are not static. You can monitor the changes of your study site in the various time series or search an area of past occurence for your favorite species. Trough the map viewer you will discover the wider context of your work, or you will find some interesting spots for the next field trip. Furthermore, we want to put as many thematic layers into our map viewer as possible. Thanks to this we can analysing and decision making in wide range of domains.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section>
+			<div class="width_settings">
+				<h3 id="links">Links & Downloads</h3>
+				<div class="colored_line"></div>
+				<div class="boxes">
+					<div class="box" onclick="downloadPage()">
+						<img class="img_box" alt="ogc" src="https://www.w3.org/2014/03/lgd/OGC_Logo_Border_Blue_2D.svg" height="110px" style="background: #E2DDD4;"/>
+						<h4>WMS & WFS</h4>
+						<p class="box_text">The observations collected by the Proplant project peers are made available online using standard OGC services as Web Map Service (WMS) and Web Feature Service (WFS)</p>
+					</div>
+					<!--
+					<div class="box" onclick="window.open('sw/1/Proplant.apk', '_blank')">
+						<img class="img_box" alt="apk1" src="static/img/android_apk.gif" height="110px"/>
+						<h4>Proplant Android App I</h4>
+						<p class="box_text">Android app with hardware acceleration enabled.</p>
+					</div>
+					-->
+					<div class="box" onclick="window.open('sw/Proplant.apk', '_blank')">
+						<img class="img_box" alt="apk" src="static/img/android_apk.gif" height="110px"/>
+						<h4>Proplant Android App version 2.0</h4>
+						<p class="box_text">Android app with hardware acceleration disabled.</p>
+					</div>
+					<div class="box" onclick="window.open('sw/source/Proplant.zip', '_blank')">
+						<img class="img_box" alt="source" src="static/img/source_code.png" height="110px"/>
+						<h4>Source Codes</h4>
+						<p class="box_text">The link contains the directory packed to a single ZIP file. Source codes for mobile app developed using Appcelerator Titanium IDE</a>.</p>
+					</div>
+
+					
+					
+				</div>
+			</div>
+		</section>
+		
+		
+		
+		<section>
+			<div class="width_settings">
+				<h3 id="contact">Contacts & Acknowledgements</h3>
+				<div class="colored_line"></div>
+				<div class="boxes">
+					<div class="box" onclick="window.open('http://www.fzki.uniag.sk/', '_blank')">
+						<img class="img_box" alt="fzki" src="static/img/FZKI_EN.gif" width="150px"/>
+						<h4>SLOVAK UNIVERSITY OF AGRICULTURE IN NITRA</h4>
+						<p class="box_text">Horticulture and Landscape Engineering Faculty</p>
+			</div>
+			<div class="box" onclick="window.open('http://digitalearthlab.jrc.ec.europa.eu/mygeoss/', '_blank')">
+						<img class="img_box" alt="mygeoss" src="static/img/mygeoss_logo.png" height="110px"/>
+						<img class="img_box" alt="fzki" src="static/img/ec_logo.jpg" height="110px"/>
+						<h4>MYGEOSS PROJECT</h4>
+						<p class="box_text">MYGEOSS is a two-year project (2015-16) by the European Commission to develop GEOSS-based (Global Earth Observation System of Systems) smart Internet applications informing European citizens on the changes affecting their local environment.</p>
+					</div>
+			
+			<div class="box" onclick="window.open('http://bolegweb.geof.unizg.hr/', '_blank')">
+						<img class="img_box" alt="bolegweb" src="https://bolegweb.geof.unizg.hr/site/sites/default/files/img/logo_125x125.png" width="150px"/>
+						<h4>BOLEGWEB PROJECT</h4>
+						<p class="box_text">Crosswalking the layers of geospatial information resources to enable a borderless geospatial web</p>
+			</div>
+					
+		</section>
+		
+		<footer>
+			<div class="width_settings">
+				<p>
+				© Proplant Monitor, Assoc. Prof. Klaudia Halászová, Jakub Kočica, Michaela Bulíková<br>2016
+				</p>
+			</div>
+		</footer>
+		<script>
+		$( document ).ready(function() {
+  // Handler for .ready() called.
+  $('#hs-info-area').hide();
+});
+		</script>
+		
+	</body>
+</html>

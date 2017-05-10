@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <id>hr.bolegweb.proplant</id>
+    <name>Proplant</name>
+    <version>2.0</version>
+    <publisher>klimeto</publisher>
+    <url/>
+    <description/>
+    <copyright>2016 by tokenbros-revo</copyright>
+    <icon>appicon.png</icon>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>false</navbar-hidden>
+    <analytics>true</analytics>
+    <guid>b3cfbfea-3f20-4047-9ddd-36a6a5f53f33</guid>
+    <property name="ti.ui.defaultunit" type="string">dp</property>
+    <ios>
+        <plist>
+            <dict>
+                <key>UISupportedInterfaceOrientations~iphone</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                </array>
+                <key>UISupportedInterfaceOrientations~ipad</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                    <string>UIInterfaceOrientationPortraitUpsideDown</string>
+                    <string>UIInterfaceOrientationLandscapeLeft</string>
+                    <string>UIInterfaceOrientationLandscapeRight</string>
+                </array>
+                <key>UIRequiresPersistentWiFi</key>
+                <false/>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+                <key>UIStatusBarHidden</key>
+                <false/>
+                <key>UIStatusBarStyle</key>
+                <string>UIStatusBarStyleDefault</string>
+            </dict>
+        </plist>
+    </ios>
+    <android android:installLocation="preferExternal" xmlns:android="http://schemas.android.com/apk/res/android">
+        <manifest android:installLocation="preferExternal">
+            <application android:debuggable="true" android:hardwareAccelerated="false"/>
+            <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23"/>
+            <uses-permission android:name="android.permission.INTERNET"/>
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+            <uses-permission android:name="android.permission.BLUETOOTH"/>
+            <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+            <uses-permission android:name="android.permission.CAMERA"/>
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+            <uses-feature android:name="android.hardware.camera"/>
+            <uses-feature android:name="android.hardware.camera.autofocus"/>
+            <permission android:label="BLUETOOTH" android:name="android.permission.BLUETOOTH"/>
+            <permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+        </manifest>
+    </android>
+    <mobileweb>
+        <precache/>
+        <splash>
+            <enabled>true</enabled>
+            <inline-css-images>true</inline-css-images>
+        </splash>
+        <theme>default</theme>
+    </mobileweb>
+    <modules>
+        <module platform="commonjs">nl.fokkezb.html2as</module>
+        <module platform="commonjs">ti.cloud</module>
+        <module platform="android">ti.cloudpush</module>
+        <module platform="android">facebook</module>
+        <module platform="android">ti.map</module>
+        <module platform="android">com.tokenbros.utils</module>
+    </modules>
+    <deployment-targets>
+        <target device="iphone">false</target>
+        <target device="ipad">false</target>
+        <target device="android">true</target>
+        <target device="mobileweb">false</target>
+        <target device="windows">false</target>
+    </deployment-targets>
+    <sdk-version>5.5.0.GA</sdk-version>
+    <property name="ti.android.threadstacksize" type="int">131072</property>
+    <property name="ti.android.httpclient.maxbuffersize" type="int">131072</property>
+    <property name="appc-app-id" type="string">57281a9d57799d3517cac89f</property>
+    <property name="acs-authbase-url-development" type="string">https://secure-identity.cloud.appcelerator.com</property>
+    <property name="acs-base-url-development" type="string">https://api.cloud.appcelerator.com</property>
+    <property name="acs-oauth-secret-development" type="string">v43PAPeFmGvPH8srb2W9MbgngYE2Gavo</property>
+    <property name="acs-oauth-key-development" type="string">alktqtZSJAyHrMkCGmfdIg4napwbPlOS</property>
+    <property name="acs-api-key-development" type="string">EBc6hTfhmVVDDrXaHZZoGl4eSIh9sGMQ</property>
+    <property name="acs-username-development" type="string">appc_app_user_dev</property>
+    <property name="acs-password-development" type="string">mv5D2i10LIZUZzgObc</property>
+    <property name="acs-authbase-url-production" type="string">https://secure-identity.cloud.appcelerator.com</property>
+    <property name="acs-base-url-production" type="string">https://api.cloud.appcelerator.com</property>
+    <property name="acs-oauth-secret-production" type="string">oGMvrIwGJgD9fHKyojuXaolwasRIJ4GO</property>
+    <property name="acs-oauth-key-production" type="string">UyqePIrRiuJoGM3DutrWbJ7dUFzDbUaQ</property>
+    <property name="acs-api-key-production" type="string">qvngfxGftr9NOOFDBJIOBSTC2m8B1xMz</property>
+    <property name="acs-username-production" type="string">appc_app_user</property>
+    <property name="acs-password-production" type="string">oc5yFd6mFW2yeH121A</property>
+    <property name="appc-org-id" type="string">100014486</property>
+    <property name="appc-creator-user-id" type="string">6a9357ca-3f15-4089-a4dc-79c83596580f</property>
+</ti:app>
